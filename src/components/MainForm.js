@@ -20,6 +20,7 @@ class MainForm extends Component {
         }
 
         this.handleChange = this.handleChange.bind(this);
+        this.addExpSection = this.addExpSection.bind(this);
     }
 
     handleChange = (id, value) => {
@@ -31,14 +32,24 @@ class MainForm extends Component {
     )}
 
     addExpSection = () => {
-        
+        let tempExperiences = this.state.experiences;
+        tempExperiences[uniqid()] = {
+            company: 'test',
+            position: '',
+            startDate: '',
+            endDate: '',
+            expDescription: '',
+        };
+        this.setState({
+            experiences: tempExperiences,
+        })
     }
 
     render(){
         return(
             <div id='mainForm'>
                 <PersonalInput recordInput={this.handleChange}/>
-                <Experiences/>
+                <Experiences addSection={this.addExpSection} expData={this.state.experiences}/>
                 <PreviewForm personalData = {this.state.personal}/>
             </div>
         );
