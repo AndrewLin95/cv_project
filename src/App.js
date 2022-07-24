@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import Header from "./components/header";
-import MainPage from "./components/mainPage";
+import Header from "./components/Header";
+import MainForm from "./components/MainForm";
 
 class App extends Component {
   render() {
     return (
       <>
         <Header/>
-        <MainPage/>
+        <MainForm/>
       </>
     )
   }
