@@ -8,7 +8,9 @@ class MainForm extends Component {
 
         this.state = {
             firstName: '',
+            lastName: '',
             title: '',
+            description: '',
         }
     }
 
@@ -18,13 +20,19 @@ class MainForm extends Component {
         }
     )}
 
-
     render(){
         return(
             <div id='mainForm'>
-                <div>Personal Information</div>
-                <input placeholder='First name' onChange={e=>{this.handleChange('firstName', e.target.value)}}></input>
-                <input placeholder='Title' onChange={e=>{this.handleChange('title', e.target.value)}}></input>
+                <div id='personalInformation'>
+                    <div>Personal Information</div>
+                    <input placeholder='First name' onChange={e=>{this.handleChange('firstName', e.target.value)}}></input>
+                    <input placeholder='Last name' onChange={e=>{this.handleChange('lastName', e.target.value)}}></input>
+                    <input placeholder='Title' onChange={e=>{this.handleChange('title', e.target.value)}}></input>
+                    <textarea placeholder='Description' rows={4} columns={40} onChange={e=>{this.handleChange('description', e.target.value)}}></textarea>
+                </div>
+                <div id=''>
+
+                </div>
                 <PreviewForm personalData = {this.state}/>
             </div>
         );

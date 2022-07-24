@@ -1,6 +1,9 @@
 #mainForm{
-    display: flex;
-    flex-direction: column;
     width: 600px;
     position: relative;
+}
+
+#personalInformation{
+    display: flex;
+    flex-direction: column;
 }
