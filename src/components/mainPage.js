@@ -4,8 +4,6 @@ import MainForm from './CVForm/mainForm';
 
 class MainPage extends Component{
 
-
-
     render() {
         return (
             <MainForm/>    

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PreviewForm from '../CVPreview/previewForm'
+import '../../styles/mainForm.css'
 
 class MainForm extends Component {
     constructor() {
@@ -20,7 +21,7 @@ class MainForm extends Component {
 
     render(){
         return(
-            <div>
+            <div id='mainForm'>
                 <div>Personal Information</div>
                 <input placeholder='First name' onChange={e=>{this.handleChange('firstName', e.target.value)}}></input>
                 <input placeholder='Title' onChange={e=>{this.handleChange('title', e.target.value)}}></input>
