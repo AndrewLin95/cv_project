@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/previewForm.css';
 
 const PreviewCV = (props) => {
-    const { personalData } = props;
+    const { personalData, experienceData } = props;
 
     return (
         <div id='previewForm'>
@@ -18,10 +18,17 @@ const PreviewCV = (props) => {
                     <div id='previewDescription'>Description</div>
                         <div id='previewDesc'>{personalData.description}</div>
                     <div id='previewExperience'>Experience</div>
+                        {Object.entries(experienceData).map(([key]) => {
+                            return (
+                                <div key={key}>
+                                    <div>{experienceData[key].position}</div>
+                                    <div>{experienceData[key].expDescription}</div>
+                                </div>
+                            )
+                        })}
                     <div id='previewEducation'>Education</div>
                 </div>
                 <div id='previewDetails'>
-
                 </div>
             </div>
         </div>
