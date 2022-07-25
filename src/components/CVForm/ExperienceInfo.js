@@ -2,12 +2,7 @@ import React, { Component } from 'react';
 import "../../styles/mainPage.css";
 
 class ExperienceInfo extends Component{
-
-    // object.entries returns an array. Can map that out?
-
     render() {
-
-
         return(
             <div id='experience' className='newSection'>
                 <div>Experiences</div>

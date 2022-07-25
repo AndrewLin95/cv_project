@@ -43,10 +43,10 @@
     word-wrap: break-word;
 }
 
-.experienceTop{
+.spaceBetween{
     justify-content: space-between;
 }
 
-.experienceInfo{
+.gap25{
     gap: 0.25em;
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import '../../styles/previewForm.css';
 
 const PreviewCV = (props) => {
-    const { personalData, experienceData } = props;
+    const { personalData, experienceData, educationData } = props;
 
     return (
         <div id='previewForm'>
@@ -21,9 +21,9 @@ const PreviewCV = (props) => {
                         {Object.entries(experienceData).map(([key]) => {
                             return (
                                 <div key={key} className='newSubSection subPadding'>
-                                    <div className='flexRow experienceTop'>
+                                    <div className='flexRow spaceBetween'>
                                         <div>{experienceData[key].position}</div>
-                                        <div className='flexRow experienceInfo'>
+                                        <div className='flexRow gap25'>
                                             <div>{experienceData[key].company}</div>
                                             <div>|| {experienceData[key].startDate} - {experienceData[key].endDate}</div>
                                         </div>
@@ -33,6 +33,19 @@ const PreviewCV = (props) => {
                             )
                         })}
                     <div id='previewEducation' className='newSection'>Education</div>
+                        {Object.entries(educationData).map(([key]) => {
+                            return(
+                                <div key={key} className='newSubSection subPadding'>
+                                    <div className='flexRow spaceBetween'>
+                                            <div>{educationData[key].course}</div>
+                                            <div className='flexRow gap25'>
+                                                <div>{educationData[key].university}</div>
+                                                <div>|| {educationData[key].startDate} - {educationData[key].endDate}</div>
+                                            </div>
+                                        </div>
+                                </div>
+                            )
+                        })}
                 </div>
                 <div id='previewDetails'>
                 </div>
