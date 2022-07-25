@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import PersonalInput from './CVForm/PersonalInfo';
-import Experiences from './CVForm/Experiences';
-import PreviewForm from './CVPreview/PreviewForm'
+import PersonalInfo from './CVForm/PersonalInfo';
+import ExperienceInfo from './CVForm/ExperienceInfo';
+import PreviewCV from './CVPreview/PreviewCV'
 import uniqid from "uniqid";
 import '../styles/mainForm.css'
 
@@ -21,6 +21,7 @@ class MainForm extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.addExpSection = this.addExpSection.bind(this);
+        this.deleteExpSection = this.deleteExpSection.bind(this);
     }
 
     handleChange = (id, value) => {
@@ -43,14 +44,23 @@ class MainForm extends Component {
         this.setState({
             experiences: tempExperiences,
         })
+        console.log(this.state.experiences);
+    }
+
+    deleteExpSection = (id) => {
+        let tempExperiences = this.state.experiences;
+        delete tempExperiences[id];
+        this.setState({
+            experiences: tempExperiences,
+        })
     }
 
     render(){
         return(
             <div id='mainForm'>
-                <PersonalInput recordInput={this.handleChange}/>
-                <Experiences addSection={this.addExpSection} expData={this.state.experiences}/>
-                <PreviewForm personalData = {this.state.personal}/>
+                <PersonalInfo recordInput={this.handleChange}/>
+                <ExperienceInfo addSection={this.addExpSection} expData={this.state.experiences} deleteSection={this.deleteExpSection}/>
+                <PreviewCV personalData = {this.state.personal}/>
             </div>
         );
     }
