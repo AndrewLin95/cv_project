@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PersonalInput extends Component {
+class PersonalInfo extends Component {
 
     render(){
         return(
@@ -17,4 +17,4 @@ class PersonalInput extends Component {
 
 
 
-export default PersonalInput
+export default PersonalInfo
