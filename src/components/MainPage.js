@@ -3,9 +3,9 @@ import PersonalInfo from './CVForm/PersonalInfo';
 import ExperienceInfo from './CVForm/ExperienceInfo';
 import PreviewCV from './CVPreview/PreviewCV'
 import uniqid from "uniqid";
-import '../styles/mainForm.css'
+import '../styles/mainPage.css'
 
-class MainForm extends Component {
+class MainPage extends Component {
     constructor() {
         super();
 
@@ -35,7 +35,7 @@ class MainForm extends Component {
     addExpSection = () => {
         let tempExperiences = this.state.experiences;
         tempExperiences[uniqid()] = {
-            company: 'test',
+            company: '',
             position: '',
             startDate: '',
             endDate: '',
@@ -55,16 +55,27 @@ class MainForm extends Component {
         })
     }
 
+    handleExpChange = (id, item, value) => {
+        let tempExperiences = this.state.experiences;
+        tempExperiences[`${id}`][`${item}`] = value;
+        this.setState({
+            experiences: tempExperiences,
+        })
+        console.log(this.state.experiences);
+    }
+
     render(){
         return(
-            <div id='mainForm'>
-                <PersonalInfo recordInput={this.handleChange}/>
-                <ExperienceInfo addSection={this.addExpSection} expData={this.state.experiences} deleteSection={this.deleteExpSection}/>
-                <PreviewCV personalData = {this.state.personal}/>
+            <div id='content'>
+                <div id='cvInfo'>
+                    <PersonalInfo recordInput={this.handleChange}/>
+                    <ExperienceInfo recordInput={this.handleExpChange} addSection={this.addExpSection} expData={this.state.experiences} deleteSection={this.deleteExpSection}/>
+                </div>
+                <PreviewCV personalData={this.state.personal} experienceData={this.state.experiences}/>
             </div>
         );
     }
 
 }
 
-export default MainForm;
+export default MainPage;

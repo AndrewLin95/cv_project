@@ -4,7 +4,7 @@ class PersonalInfo extends Component {
 
     render(){
         return(
-            <div id='personalInformation'>
+            <div id='personalInformation' className='flexColumn newSubSection'>
                 <div>Personal Information</div>
                 <input placeholder='First name' onChange={e=>{this.props.recordInput('firstName', e.target.value)}}></input>
                 <input placeholder='Last name' onChange={e=>{this.props.recordInput('lastName', e.target.value)}}></input>

@@ -1,0 +1,35 @@
+#content{
+    width: 600px;
+    position: relative;
+    top: 2em;
+}
+
+#cvInfo{
+    border: 2px solid lightblue;
+    padding: 1.5em;
+}
+
+.flexColumn{
+    display: flex;
+    flex-direction: column;
+}
+
+.flexRow{
+    display:flex;
+    flex-direction: row;
+}
+
+.newSection{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.newSubSection{
+    padding-top: 0.5em;
+    gap: 0.25em;
+}
+
+.btn{
+    width: 5em;
+    margin-bottom: 0.5em;
+}

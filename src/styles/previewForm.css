@@ -6,23 +6,22 @@
     border: black 1px solid;
 }
 
-#previewHeader,
-#previewMain{
-    padding-left: 1em;
-    gap: 0.5em;
+.defaultPadding{
+    padding-left: 1.5em;
+    padding-right: 1.5em;
 }
 
-#previewMain{
-    padding-top: 1em;
+.subPadding{
+    padding-left: 0.5em;
 }
 
 #previewHeader{
     display:flex;
     flex-direction: column;
     height: 5em;
-    background: darkblue;
-    color: white;
     justify-content: center;
+    padding-top: 1.5em;
+    gap: 0.5em;
 }
 
 #previewName{
@@ -32,3 +31,22 @@
     font-size: 2em;
 }
 
+#seperator{
+    padding-top: 0.25em;
+    width: 100%;
+    background: lightblue;
+}
+
+#previewDesc{
+    height: auto;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+.experienceTop{
+    justify-content: space-between;
+}
+
+.experienceInfo{
+    gap: 0.25em;
+}
