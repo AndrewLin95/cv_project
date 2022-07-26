@@ -21,9 +21,9 @@ const PreviewCV = (props) => {
                         <div id='previewTitle'>{personalData.title}</div>
                     </div>
                     <div id='contactInfo'>
-                        <div>{phoneIcon}</div>
-                        <div>{emailIcon}</div>
-                        <div>{locationIcon}</div>
+                        <div>{phoneIcon} {personalData.phone}</div>
+                        <div>{emailIcon} {personalData.email}</div>
+                        <div>{locationIcon} {personalData.location}</div>
                     </div>
                 </div>
                 <div className='seperator'></div>

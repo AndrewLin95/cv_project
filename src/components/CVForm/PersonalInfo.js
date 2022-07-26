@@ -9,6 +9,9 @@ class PersonalInfo extends Component {
                 <input placeholder='First name' onChange={e=>{this.props.recordInput('firstName', e.target.value)}}></input>
                 <input placeholder='Last name' onChange={e=>{this.props.recordInput('lastName', e.target.value)}}></input>
                 <input placeholder='Title' onChange={e=>{this.props.recordInput('title', e.target.value)}}></input>
+                <input placeholder='Phone Number' onChange={e=>{this.props.recordInput('phone', e.target.value)}}></input>
+                <input placeholder='Email' onChange={e=>{this.props.recordInput('email', e.target.value)}}></input>
+                <input placeholder='Location' onChange={e=>{this.props.recordInput('location', e.target.value)}}></input>
                 <textarea placeholder='Description' rows={4} columns={40} onChange={e=>{this.props.recordInput('description', e.target.value)}}></textarea>
             </div>
         )
