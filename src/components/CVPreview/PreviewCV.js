@@ -20,10 +20,10 @@ const PreviewCV = (props) => {
                         </div>
                         <div id='previewTitle'>{personalData.title}</div>
                     </div>
-                    <div id='contactInfo'>
-                        <div>{phoneIcon} {personalData.phone}</div>
-                        <div>{emailIcon} {personalData.email}</div>
-                        <div>{locationIcon} {personalData.location}</div>
+                    <div id='contactInfo' className='flexColumn'>
+                        <div className='supplementInfo'>{phoneIcon} {personalData.phone}</div>
+                        <div className='supplementInfo'>{emailIcon} {personalData.email}</div>
+                        <div className='supplementInfo'>{locationIcon} {personalData.location}</div>
                     </div>
                 </div>
                 <div className='seperator'></div>

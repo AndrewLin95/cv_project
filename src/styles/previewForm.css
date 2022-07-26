@@ -68,6 +68,11 @@
     font-size: 0.9em;
 }
 
+#contactInfo{
+    align-items: flex-start;
+    justify-content: center;
+}
+
 textarea{
     resize: none;
 }

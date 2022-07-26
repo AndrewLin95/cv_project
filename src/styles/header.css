@@ -4,4 +4,13 @@
     justify-content: center;
     background-color: rgba(152,85,212,0.9);
     width: 100vw;
+    padding: 1.5vh;
+}
+
+#footer{
+    font-size: 4em;
+}
+
+a, a:visited, a:active {
+    color: inherit;
 }
