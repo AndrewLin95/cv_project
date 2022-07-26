@@ -48,7 +48,6 @@ class MainPage extends Component {
         this.setState({
             experiences: tempExperiences,
         })
-        console.log(this.state.experiences);
     }
 
     deleteExpSection = (id) => {
@@ -65,7 +64,6 @@ class MainPage extends Component {
         this.setState({
             experiences: tempExperiences,
         })
-        console.log(this.state.experiences);
     }
 
     addEduSection = () => {
@@ -95,7 +93,6 @@ class MainPage extends Component {
         this.setState({
             education: tempEducation,
         })
-        console.log(this.state.education);
     }
 
     render(){

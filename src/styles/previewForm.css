@@ -4,11 +4,13 @@
     position: relative;
     top: 5em;
     border: black 1px solid;
+    margin-bottom: 15em;
+    height: 800px;
 }
 
 .defaultPadding{
-    padding-left: 1.5em;
-    padding-right: 1.5em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 
 .subPadding{
@@ -16,25 +18,25 @@
 }
 
 #previewHeader{
-    display:flex;
-    flex-direction: column;
     height: 5em;
     justify-content: center;
-    padding-top: 1.5em;
+    padding-top: 4em;
     gap: 0.5em;
 }
 
 #previewName{
     display: flex;
     flex-direction: row;
-    gap: 0.5em;
-    font-size: 2em;
+    gap: 0.3em;
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #7b2cbf;
 }
 
-#seperator{
+.seperator{
     padding-top: 0.25em;
     width: 100%;
-    background: lightblue;
+    background: #c77dff;
 }
 
 #previewDesc{
@@ -43,10 +45,29 @@
     word-wrap: break-word;
 }
 
+.sectionTitle{
+    color: #7b2cbf;
+    font-weight: 700;
+    font-size: 1.2em;
+}
+
 .spaceBetween{
     justify-content: space-between;
 }
 
 .gap25{
     gap: 0.25em;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.supplementInfo{
+    align-items: center;
+    font-size: 0.9em;
+}
+
+textarea{
+    resize: none;
 }
